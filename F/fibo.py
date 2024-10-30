@@ -21,3 +21,20 @@ def fibo(n):
 
 
 print(fibo(7))
+
+
+
+#recursion method, not as efficient as the above 
+def fibo_recursive2(n):
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibo_recursive2(n - 1) + fibo_recursive2(n - 2)
+
+# Generating the sequence up to the nth index
+def generate_fibo_sequence(n):
+    return [fibo_recursive2(i) for i in range(n + 1)]
+
+# Example usage
+print(generate_fibo_sequence(7))  # Output: [0, 1, 1, 2, 3, 5, 8, 13]
