@@ -1,4 +1,4 @@
-# We have an array [1,2,3,4,5,6,7,8,9,10] and a target = 7
+# We have an array [1,2,3,4,5,6,7,8,9,10] and a target = 7;
 # and we want to return the index of the target number
 
 
