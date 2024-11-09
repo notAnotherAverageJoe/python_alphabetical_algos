@@ -25,3 +25,37 @@ def quicksort(arr, low, high):
 arr = [10, 7, 8, 9, 1, 5]
 quicksort(arr, 0, len(arr) - 1)
 print("Sorted array:", arr)
+
+
+
+
+def quick_sort(arr):
+    if len(arr) <=1:
+        return arr
+    left = []
+    right = []
+    mid = arr[0]
+    
+    for i in range(1, len(arr)):
+        if arr[i] < mid:
+            left.append(arr[i])
+        else:
+            right.append(arr[i])
+            
+    return quick_sort(left) + [mid] + quick_sort(right)
+
+arr1 = [2,5,4,3,7,8,1]
+print(quick_sort(arr1))
+
+def quick_sort2(arr):
+    if len(arr) <=1:
+        return arr
+    
+    pivot = arr[0]
+    
+    left = [x for x in arr[1:] if x < pivot]
+    right = [x for x in arr[1:] if x >= pivot]
+    
+    return quick_sort2(left) + [pivot] + quick_sort2(right)
+
+print(quick_sort2(arr1))
